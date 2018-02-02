@@ -19,16 +19,16 @@ int main() {
 	FILE *AUFile;
 		
 	AuHd ah = {0x2e736e64,24,0xffffffff,3,11025,1};
-	//データ長は不明(0xffffffffでOK)
+	//データ長は不明(0xffffffff)でOK
  
 	if ((AUFile = fopen("sample.au", "wb")) == NULL) {
-				printf("ファイル '%s' が書き込みオープンできません", "sample.au");
-					exit(1);
-		}
+		printf("ファイル '%s' が書き込みオープンできません", "sample.au");
+		exit(1);
+	}
 
 	if((TextFile=fopen("sample.txt","rb"))==NULL){
-						return(-1);			
-		}
+		return(-1);			
+	}
 		
 		
 	for(int i=0;i<60000;i++) //テキストの数字の任意の数を指定
