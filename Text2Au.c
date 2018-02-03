@@ -18,7 +18,7 @@ int main() {
 	FILE *TextFile;
 	FILE *AUFile;
 		
-	AuHd ah = {0x2e736e64,24,0xffffffff,3,11025,1};
+	AuHd ah = {0x2e736e64,24,0xffffffff,"エンコードの種類","サンプリングレート","チャンネル数"};
 	//データ長は不明(0xffffffff)でOK
  
 	if ((AUFile = fopen("sample.au", "wb")) == NULL) {
