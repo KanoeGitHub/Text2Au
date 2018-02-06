@@ -22,16 +22,16 @@ int main() {
 	//データ長は不明(0xffffffff)でOK
  
 	if ((AUFile = fopen("sample.au", "wb")) == NULL) {
-		printf("ファイル '%s' が書き込みオープンできません", "sample.au");
+		printf("ファイルを書き込みできません");
 		exit(1);
-	}
+	}//作成するSUNオーディオファイル
 
 	if((TextFile=fopen("sample.txt","rb"))==NULL){
 		return(-1);			
-	}
+	}//PCMデータのテキストファイル読み取り
 		
 		
-	for(int i=0;i<60000;i++) //テキストの数字の任意の数を指定
+	for(int i=0;i<44100;i++) //サンプリングレート数に対する書き出すサンプルの量を入力
 		{
 			unsigned short a;
 			double d;
